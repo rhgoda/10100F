@@ -46,15 +46,6 @@ const AnalId = [];
 bot.launch()
 
 
-
-
-
-
-
-
-
-
-
 //======================UPDATE
 function update() {
   try {
@@ -63,7 +54,7 @@ function update() {
       const page = await browser.newPage();
       await page.goto('https://aliexpress.ru/item/1005002907849570.html?spm=a2g2w.productlist.i3.2.7f6125a4zfKXg2&sku_id=12000022722268689');
       //await page.goto('https://yandex.com');
-      await page.screenshot({path: 'example.png', clip: {x:50, y:230, width:700, height:500}});
+      await page.screenshot({path: 'example.png', clip: {x:50, y:250, width:700, height:500}});
       await browser.close();
     })();
   } catch (e) {
