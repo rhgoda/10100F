@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require('path');
 const fetch = require('node-fetch');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const app = express();
 const port = 3000;
 
@@ -25,7 +25,7 @@ console.log("Говно запущено на порте " + port)
 
 //==============================BOT
 const { Telegraf } = require('telegraf');
-bot = new Telegraf(tg_token)
+bot = new Telegraf(process.env.TOKEN)
 const AnalId = [];
 
 
@@ -51,13 +51,13 @@ function update() {
 
   // вот тут постинг
 }
-ctx.telegram.sendMediaGroup(ctx.from.id, [
+ctx.telegram.sendMediaGroup(ctx.chanel_id , [
   {
     type: "photo",
     media:
       "example.png"
   },
-]); // так же будет работать да
+]); 
 
 update(); // 
 setInterval(update, 600000);
