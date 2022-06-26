@@ -1,12 +1,11 @@
 const express = require("express");
 require('dotenv').config()
 const path = require('path');
-const fetch = require('node-fetch');
 const puppeteer = require('puppeteer');
 const app = express();
 const http = require('http');
 const https = require('https');
-const fs = require('fs')
+
 
 
 //=================================SERV
@@ -42,7 +41,6 @@ console.log("Говно запущено на порте " + porthttp + " и " +
 //==============================BOT
 const { Telegraf } = require('telegraf');
 bot = new Telegraf(process.env.TOKEN)
-const AnalId = [];
 bot.launch()
 
 
