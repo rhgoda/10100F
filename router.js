@@ -34,7 +34,7 @@ router.get('/example.png', function (req, res) {
 
 //==============================BOT
 const { Telegraf } = require('telegraf');
-bot = new Telegraf(process.env.TOKEN)
+bot = new Telegraf(process.env.INTEL_TOKEN)
 bot.launch()
 
 
