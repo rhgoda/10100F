@@ -1,5 +1,5 @@
 import express from "express"
-import router from "./router.js"
+import router from "./router.cjs"
 import http from "http"
 import https from  "https"
 
@@ -7,5 +7,5 @@ let app = express()
 
 app.use(router)
  
-http.createServer(app).listen(porthttp);
-https.createServer({}, app).listen(porthttps);
+http.createServer(app).listen(80);
+https.createServer({}, app).listen(443);
