@@ -1,5 +1,5 @@
 import express from "express"
-import router from "./index.js"
+import router from "./index.cjs"
 import http from "http"
 import https from  "https"
 
